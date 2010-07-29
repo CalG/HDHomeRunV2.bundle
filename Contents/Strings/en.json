@@ -1,0 +1,93 @@
+{
+    'Title': 'HDHomeRun',
+    'VideoTitle': 'HDHomeRun (TV Channels)',
+    
+    'PreferencesTitle': 'Settings',
+    'PreferencesSubtitle': 'Set your device settings and location',
+    'PreferencesSummary': 'settings for HDHomeRun device and your location',
+    
+    'DeviceIdPrefLabel': 'Device ID (see bottom of unit)',
+    'TunerIdPrefLabel': 'Default Tuner Id',
+    'CountryPrefLabel': 'Country',
+    'PostalCodePrefLabel': 'Postal Code',
+    'CoutryPrefDefault': 'United States (US)',
+    'Channel': 'Channel',
+    'Channels': 'Channels',
+    
+    'Success': 'Success',
+    'Error': 'Error',
+    'Unknown': 'Unknown',
+    'NoName': 'No Name',
+    'Watch': 'Watch',
+
+    'ProblemViewingChannel': 'Problem viewing channel',
+    
+    'SettingsSaved': 'Your settings have been saved',
+    'NoDeviceId': 'No device ID provided.',
+    'NoCountry': 'No country selected.',
+    'NoPostalCode': 'No postal code provided.',
+    'NoLocationData': 'No Location Data',
+    'SetYourLocationData': 'Go to the settings and set your location data',
+    'NoChannels': 'No channels found.',
+    'NoChannelsFoundFor': 'No channels found for',
+    'NoChannelDataFound': 'Could get find channel',
+    'NoLineupDataFound': 'Could not get lineup data',
+    'ProblemFetchingChannels': 'Problem encountrered while trying to fetch channels for',
+    'ProblemUpdatingChannels': 'Problem encountrered while trying to update channel data for',
+    'ChannelsFound': 'channels found',
+    
+    'ExploreChannels': 'Verify and Edit Channel Data',
+    'ExploreChannelsSummary': 'test channels, add and remove from your main viewing list',
+    
+    'DownloadChannels': 'Download channels',
+    'ReDownloadChannels': 'Re-download channels',
+    'DownloadChannelsSummary': 'download channel data from SiliconDust web site',
+    
+    'NotVerifiedState': 'not verified',
+    'DisabledState': 'disabled',
+
+    'TryToView': 'Try to view channel',
+    'TryToViewSummary': 'try to open the stream to see if it works',
+    'VerifyAndEnable': 'Verify and enable channel',
+    'VerifyAndEnableSummary': 'add this channel to your main viewing list',
+    'VerifyAndDisable': 'Verify and disable channel',
+    'VerifyAndDisableSummary': 'mark channel as verified, but do not add this to your main viewing list',
+    'Disable': 'Disable channel',
+    'DisableSummary': 'remove this channel from your main viewing list',
+    'Enable': 'Enable channel',
+    'EnableSummary': 'add this channel to your main viewing list',
+
+    'ChangeDisplayNameTitle': 'Change display name for channel',
+    'ChangeDisplayNamePrompt': 'Channel Display Name',
+    'ChangeDisplayNameSummary': 'change the name displayed for this channel',
+    'ProblemSettingDisplayName': 'Problem setting channel display name for',
+    'DisplayNameSetFor': 'Display name set for',
+
+    'ChangeImageNameTitle': 'Change icon image for channel',
+    'ChangeImageNameSummary': 'change the icon image for this channel',
+    'ProblemSettingImageName': 'Problem setting channel icon image for',
+    'ImageNameSetFor': 'Icon image set for',
+
+    'SeeDetailsFor': 'See details for channel',
+    'SeeDetailsForSummary': 'display all details about this channel stream',
+    'ChannelDetails': 'Channel Details',
+    
+    'NowVerified': 'now verified',
+    'NowDisabled': 'now disabled',
+    'NowEnabled': 'now enabled',
+
+    'InsertChannelTitle': 'Add Channel Stream',
+    'InsertChannelSubtitle': '',
+    'InsertChannelSummary': 'manually add an channel stream URL',
+    'InsertChannelPrompt': 'Enter the video stream URL',
+
+    'MyChannel': 'My Channel',
+
+    'MyLineupDisplayName': 'Manually added channels ',
+    'MyLineupProviderName': 'My Channels',
+    'Added': 'Added',
+    'InputError': 'Input Error',
+    'BadStreamUrl': 'HDHomeRun URLs should have one of the formats:',
+    'ProblemInsertingChannel': 'Problem inserting channel',
+
+}
