@@ -6,8 +6,10 @@
 # plugin
 #from Code import Util
 #from Code.Classes import Lineup
+import Util
+import Lineup
 
-class LineupList(list):
+class lineupList(list):
     """
     A list of all channel lineups
     """
@@ -21,7 +23,13 @@ class LineupList(list):
         self.country = country
         self.postalCode = postalCode
         self.loadLineups(country, postalCode)
-  
+    """
+    def __getstate__(self):
+        result = self.__dict__.copy()
+        return result
+    def __setstate__(self, dict):
+        self.__dict__ = dict
+	"""
     ########################################
     def loadLineups(self, country, postalCode):
         """
@@ -29,25 +37,25 @@ class LineupList(list):
         of Lineup objects. XML structure is:
 
         <LineupUIResponse>
- 	       <Location>US:78750</Location>
-	       <Lineup>
-		      <DisplayName>Digital Antenna: Austin, TX, 78750</DisplayName>
-		      <DatabaseID>2252478</DatabaseID>
-		      <Program>
+            <Location>US:78750</Location>
+           <Lineup>
+              <DisplayName>Digital Antenna: Austin, TX, 78750</DisplayName>
+              <DatabaseID>2252478</DatabaseID>
+              <Program>
                    ... channel info
-		      </Program>
+              </Program>
             </Lineup>
         </LineupUIResponse>
         """
 
         lineupUrl = 'http://www.silicondust.com/hdhomerun/lineup_web/%s:%s' % ( country.abbrev, postalCode )
-        Log( "LOAD LINEUPS URL: %s" % lineupUrl, True )
+        Log( "LOAD LINEUPS URL: %s" % lineupUrl )
 
         responseXml = XML.ElementFromURL( lineupUrl )
         
         location = Util.XPathSelectOne( responseXml,
                                         '/LineupUIResponse/Location')
-        Log( "LOCATION %s" % location, True )
+        Log( "LOCATION %s" % location )
 
         for lineupItemXml in responseXml.xpath('/LineupUIResponse/Lineup'):
             lineup = Lineup.fromXml( lineupItemXml )

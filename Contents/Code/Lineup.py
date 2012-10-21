@@ -1,5 +1,5 @@
 # Python libs
-#import re
+import re
 
 # PMS plugin framework
 #from PMS.Shortcuts import *
@@ -7,6 +7,8 @@
 # plugin
 #from Code import Util
 #from Code.Classes import Channel
+import Util
+import Channel
 
 ########################################
 class Lineup:
@@ -107,10 +109,10 @@ def fromXml( lineupXml ):
     this:
 
     <Lineup>
-		<DisplayName>Grande Cable: Austin, TX, 78750</DisplayName>
-		<ProviderName>Grande Cable</ProviderName>
-		<DatabaseID>2262080</DatabaseID>
-		<Program>
+        <DisplayName>Grande Cable: Austin, TX, 78750</DisplayName>
+        <ProviderName>Grande Cable</ProviderName>
+        <DatabaseID>2262080</DatabaseID>
+        <Program>
               ....
           </Program>
      </Lineup>

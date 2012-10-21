@@ -1,0 +1,48 @@
+HDHomerun TODO list
+
+V2 changes.
+No more Subtitles on objects
+.nocache = 1 now .no_cache = True
+
+container.append container.add
+
+Remove PMS Imports
+
+//http://dev.plexapp.com/docs/api/objectkit.html
+
+MediaContainer 	now ObjectContainer
+DirectoryItem  	now DirectoryObject
+VideoItem 	Now VideoClipObject ? (Should we be using the MediaObject instead?)
+PrefsItem 	Now PrefsObject
+
+Plugin.AddPrefixHandler(VIDEO_PREFIX, VideoMainMenu, L('VideoTitle'), ICON, ART) now 
+@handler(VIDEO_PREFIX, L('VideoTitle'), ICON, ART)
+def VideoMainMenu():
+
+Callbacks are now changed.
+Function (VideoItem( PlayStreamCallback... ),lineupId = ...)
+VideoClipObject (Key = Callback(PlayStreamCallback, lineupId = ...)
+DirectoryObject now add title =
+
+
+def ChannelDetailsCallback(lineupId, channelId):
+
+def DownloadLineupsCallback():
+
+def ExploreLineupsCallback():
+
+def ExploreChannelsCallback(lineupId):
+
+def ExploreOptionsCallback(lineupId, channelId):
+
+def InsertChannelCallback(query):
+def PlayStreamCallback( lineupId, channelId ):
+def SetChannelDisplayNameCallback(lineupId, channelId, query ):
+
+def SetChannelImageNameCallback(lineupId, channelId, imageName ):
+    
+def ShowChannelImageChoicesCallback(lineupId, channelId ):
+
+def VerifyChannelCallback(lineupId, channelId, enabled):
+def EnableDisableCallback(lineupId, channelId, enabled): 
+

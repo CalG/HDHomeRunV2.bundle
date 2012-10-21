@@ -1,0 +1,28 @@
+[
+    {
+         "id": "device_id",
+         "type": "text",
+         "label": "Device ID (see bottom of unit)",
+         "default": "" 
+    },
+    {
+         "id": "tuner_id",
+         "type": "enum",
+         "label": "Default Tuner Id",
+		 "values": ["0", "1", "2"],
+         "default": "0"
+    },
+    {
+         "id": "country",
+         "type": "text",
+         "label": "Country",
+		 "values": ["Australia", "Canada", "Denmark", "France", "Germany", "Italy", "New Zealand", "Spain", "Sweden", "United Kingdom", "United States"],
+         "default": "United States (US)"
+    },
+    {
+         "id": "postal_code",
+         "type": "text",
+         "label": "Postal Code",
+         "default": "" 
+    }
+]

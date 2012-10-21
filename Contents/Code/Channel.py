@@ -1,11 +1,11 @@
 # Python libs
-#import re
+import re
 
 # PMS plugin framework
 #from PMS.Shortcuts import *
 
 # plugin
-#from Code import Util
+import Util
 
 ########################################
 class Channel:
@@ -129,7 +129,8 @@ class Channel:
     ########################################
     def getStreamUrl( self, deviceId, tunerId ):
         if self.Modulation and self.Frequency and self.ProgramNumber:
-            return "hdhomerun://%s-%s/tuner%s?channel=%s:%s&program=%s" % ( deviceId, tunerId, tunerId, self.Modulation, self.Frequency, self.ProgramNumber )
+            #return "hdhomerun://%s-%s/tuner%s?channel=%s:%s&program=%s" % ( deviceId, tunerId, tunerId, self.Modulation, self.Frequency, self.ProgramNumber )
+            return "hdhomerun://%s-%s/tuner%s?channel=auto:%s&program=%s" % ( deviceId, tunerId, tunerId, self.PhysicalChannel, self.ProgramNumber )
         if self.PhysicalChannel and self.ProgramNumber:
             return "hdhomerun://%s-%s/ch%s-%s" % ( deviceId, tunerId, self.PhysicalChannel, self.ProgramNumber )
         return None
@@ -158,19 +159,19 @@ def fromXml( programXml ):
     given country and postal code. The XML for a single channel looks like
     this:
     
-    		<Program>
-     		<Modulation>8vsb</Modulation>
-    			<Frequency>479000000</Frequency>
-    			<PhysicalChannel>15</PhysicalChannel>
-    			<ProgramNumber>3</ProgramNumber>
-    			<GuideNumber>25.1</GuideNumber>
-    			<GuideName>KAVUDT</GuideName>
-    			<Resolution>1280x720p</Resolution>
-    			<Aspect>16:9</Aspect>
-    			<Snapshot>19337181</Snapshot>
-    			<Snapshot>19305855</Snapshot>
-    			<Snapshot>19435334</Snapshot>
-    		</Program>
+            <Program>
+             <Modulation>8vsb</Modulation>
+                <Frequency>479000000</Frequency>
+                <PhysicalChannel>15</PhysicalChannel>
+                <ProgramNumber>3</ProgramNumber>
+                <GuideNumber>25.1</GuideNumber>
+                <GuideName>KAVUDT</GuideName>
+                <Resolution>1280x720p</Resolution>
+                <Aspect>16:9</Aspect>
+                <Snapshot>19337181</Snapshot>
+                <Snapshot>19305855</Snapshot>
+                <Snapshot>19435334</Snapshot>
+            </Program>
     """
     
     channel = Channel()
